@@ -19,13 +19,13 @@
     
     for ( NSString * stateCaptail in stateList) {
         NSArray * eachArray = [stateCaptail componentsSeparatedByString:@":"];
+        //NSLog(@"eachArray %@", eachArray);
         [stateWithCap setObject:eachArray[1] forKey:eachArray[0]];
     }
     
-
-    
-    
     ////////////////////////
+    
+    /**
     NSArray * allState = [stateWithCap allKeys];
     NSArray * allCaps = [stateWithCap allValues];
     
@@ -44,7 +44,6 @@
                 if ([singleCap containsObject: sch]){
                     break;
                 }
-            
         }
         
         if (match == NO) {
@@ -52,38 +51,50 @@
         }
         else
         {
-            NSLog(@"%@", eachState);
+            //NSLog(@"%@", eachState);
         }
     }
     
-    /*
-     
-     for (NSSting * letter in lettersInState){
-     if ([
-    */
-    
-    
+*/
     //----
-    for ( NSString * state in stateWithCap){
-        NSString * captial =  stateWithCap[state];
-        BOOL isWinner = ![self string:state containsLetter:captial];
-        if (isWinner) {
-            NSLog(@"it is the winner %@",state);
-            return state;
-        }
+    
+//    for ( NSString * state in stateWithCap){
+//        NSString * captial =  stateWithCap[state];
+//        BOOL isWinner = ![self string:state containsLetter:captial];
+//        if (isWinner) {
+//            NSLog(@"it is the winner %@",state);
+//            return state;
+//        }
+//    }
+    
+    
+//    NSArray * allState = stateWithCap.allKeys;
+//    NSArray * allCaps = stateWithCap.allValues;
+    
+    for (NSString * state in stateWithCap ) {
+        
+        if ( [ self string:[stateWithCap[state]lowercaseString] containsLetter:state.lowercaseString] ){
+           // NSLog(@" has letters ");
+        } else NSLog(@" does not have %@", state);
+        
     }
     
-    return @"";
+    
+//NSDictionary * stateTest = @{ @"New York" : @"Albany"};
+//    if ( [self string:@"albany" containsLetter:@"new york"] == YES){
+//        NSLog(@" has letters ");
+//    } else NSLog(@" does not have ");
+//    
+    
+    return YES;
 }
 
 
-// get the first char or char at index
 -(NSString *)characterOfString:(NSString *)string
                        atIndex:(NSUInteger)index {
     
     unichar character = [string characterAtIndex:index];
     NSString * firstCharacterINString = [NSString stringWithFormat:@"%c", character];
-    //NSLog(@"first character in string is %@", firstCharacterINString);
     return firstCharacterINString;
 }
 
@@ -99,33 +110,19 @@
     for (NSUInteger i = 0 ; i < name.length ; i++ ) {
         [lettersInState addObject:[self characterOfString:name atIndex:i]];
     }
-    
+
     return lettersInState;
-    
+
 }
 
 
-//-(BOOL)isMatch:(NSArray *)eachCapArray
-//      contains:(NSString *)eachChar{
-//    
-//    for (NSString * eachStringCap in eachCapArray) {
-//        if ([eachStringCap containsString:eachChar]) {
-//            return NO;
-//        }
-//    }
-//    
-//    return YES;
-//}
 
 -(BOOL)string:(NSString *)string containsLetter: (NSString *)otherString
 {
-    // we can use staring in string
     NSArray * lettersInString = [self stateNameFromString:otherString];
     
-    //BOOL lettersInStaing = [string containsString:otherString];
-    
     for (NSString * letter in lettersInString) {
-        if ([self string:string containsLetter:letter]) {
+        if ([string containsString:letter]) {
             return YES;
         }
     }
@@ -134,12 +131,22 @@
     // the first pair that have no shared letter is the winner;
     // ---
     
-    
-    
     return NO;
     
 }
 
+
+//-(BOOL)isMatch:(NSArray *)eachCapArray
+//      contains:(NSString *)eachChar{
+//
+//    for (NSString * eachStringCap in eachCapArray) {
+//        if ([eachStringCap containsString:eachChar]) {
+//            return NO;
+//        }
+//    }
+//
+//    return YES;
+//}
 
 - (NSString *)solveTrivia {
 
@@ -168,6 +175,16 @@
      
      */
     
+    
+//    for ( NSString * state in stateWithCap){
+//        NSString * captial =  stateWithCap[state];
+//        BOOL isWinner = ![self string:state containsLetter:captial];
+//        if (isWinner) {
+//            NSLog(@"it is the winner %@",state);
+//            return state;
+//        }
+//    }
+//    
 
     return @"";
     
