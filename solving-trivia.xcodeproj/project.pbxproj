@@ -10,6 +10,7 @@
 		1245ABDBDC24417EBAE26E87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F0F7179A22477AB280F236 /* main.m */; };
 		4119FCA523E97339CD0C8C0A /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC87EE100C82D05B7A7C5DA /* libPods-unit_tests.a */; };
 		56360577974143E4B1C04611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18FCBBA95B948D3989B3220 /* Foundation.framework */; };
+		62D16A721BBAD1B70076E617 /* stateC.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62D16A711BBAD1B70076E617 /* stateC.txt */; settings = {ASSET_TAGS = (); }; };
 		749BBE7D305B4E29B4F3A991 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 287369C61970455F92CDE01C /* FISAppDelegate.m */; };
 		E2D592C01B011E7000479820 /* FISAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D592BE1B011E7000479820 /* FISAppDelegateSpec.m */; };
 		EA8128672C78484E92656646 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F97384977A4C9488E4971D /* Images.xcassets */; };
@@ -34,6 +35,7 @@
 		553ECD4BC85B45C1B547B54A /* solving-trivia-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "solving-trivia-Info.plist"; sourceTree = "<group>"; };
 		57F97384977A4C9488E4971D /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		619C3910C20E4B3C8578BEDA /* solving-trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "solving-trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D16A711BBAD1B70076E617 /* stateC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stateC.txt; sourceTree = SOURCE_ROOT; };
 		7223F7D1CB2BA80D3B8AA8B4 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		DDC87EE100C82D05B7A7C5DA /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18FCBBA95B948D3989B3220 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -117,6 +119,7 @@
 			children = (
 				50743FFDE81E486AB11CAF50 /* FISAppDelegate.h */,
 				287369C61970455F92CDE01C /* FISAppDelegate.m */,
+				62D16A711BBAD1B70076E617 /* stateC.txt */,
 				A4A4B55E8785426086A9748C /* Resources */,
 			);
 			path = "solving-trivia";
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D16A721BBAD1B70076E617 /* stateC.txt in Resources */,
 				EA8128672C78484E92656646 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
